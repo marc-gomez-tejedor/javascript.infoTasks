@@ -6,5 +6,5 @@ styles[Math.floor(styles.length/2)] = "Classics";
 alert(styles);
 alert(styles.shift());
 alert(styles);
-styles.unshift("Rap", "Reggae")
+styles.unshift("Rap", "Regge")
 alert(styles);
