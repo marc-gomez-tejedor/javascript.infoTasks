@@ -13,9 +13,18 @@
 <!-- <script src="sumInput.js"></script> -->
 <!-- <script src="aMaximalSubArray.js"></script> -->
 <script !tests>
-    let arr1 = [];
-    let arr2 = [];
-    alert(arr1==arr2);
+function filterRangeInPlace(arr, a, b) {
+  for (let i = 0; i < arr.length; i++) {
+    let num = arr[i];
+    if (arr[i] < a || arr[i] > b) {
+      arr.splice(i, 1);
+      i--;
+    }
+  }
+}
+let arr = [0,1,2,3,4,5];
+filterRangeInPlace(arr,2,4);
+alert(arr);
 </script>
 
 </html>
