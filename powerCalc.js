@@ -34,7 +34,13 @@ extendableCalculator.addMethod("==", (a, b) => a == b);
 extendableCalculator.addMethod("<=", (a, b) => a <= b);
 extendableCalculator.addMethod("<", (a, b) => a < b);
 
+function drawTriangle(n, m) {
+  return "hi";
+}
+extendableCalculator.addMethod("drawRectAxB", (a, b) => drawTriangle(a, b));
+
 let result = extendableCalculator.calculate("2 ** 3");
 alert( result ); // 8
 alert( extendableCalculator.calculate("2 > 3"));
+alert( extendableCalculator.calculate("2 drawRectAxB 3"));
 
