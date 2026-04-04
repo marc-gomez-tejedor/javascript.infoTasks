@@ -28,7 +28,13 @@ let extendableCalculator = new Calculator;
 extendableCalculator.addMethod("*", (a, b) => a * b);
 extendableCalculator.addMethod("/", (a, b) => a / b);
 extendableCalculator.addMethod("**", (a, b) => a ** b);
+extendableCalculator.addMethod(">", (a, b) => a > b);
+extendableCalculator.addMethod(">=", (a, b) => a >= b);
+extendableCalculator.addMethod("==", (a, b) => a == b);
+extendableCalculator.addMethod("<=", (a, b) => a <= b);
+extendableCalculator.addMethod("<", (a, b) => a < b);
 
 let result = extendableCalculator.calculate("2 ** 3");
 alert( result ); // 8
+alert( extendableCalculator.calculate("2 > 3"));
 
