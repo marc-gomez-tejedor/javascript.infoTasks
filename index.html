@@ -15,15 +15,23 @@
 <!-- <script src="https://en.js.cx/test/libs.js"></script> -->
 <!-- <script src="test.js"></script> -->
 <!-- <script src="powerCalc.js"></script> -->
- <script>
-let john = { name: "John", age: 25 };
-let pete = { name: "Pete", age: 30 };
-let mary = { name: "Mary", age: 28 };
+<script>
+function sumToLoop(n) { 
+    let sum = 0;
+    for (let i = 0; i <= n; i++) {
+        sum += i;
+    }
+    return sum;
+}
 
-let users = [ john, pete, mary ];
-
-let names = users.map((user) => user.name);
-
-alert( names ); // John, Pete, Mary
- </script>
+function sumToRecursive(n) { 
+    return n == 1 ? n : n + sumToRecursive(n - 1);
+}
+function sumToArithmetic(n) { 
+    return n * (n + 1) / 2;
+}
+alert( sumToLoop(1001) ); // 5050
+alert( sumToRecursive(1001) ); // 5050
+alert( sumToArithmetic(1001) ); // 5050
+</script>
 </html>
